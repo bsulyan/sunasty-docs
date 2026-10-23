@@ -1,0 +1,12 @@
+site_name: Sunasty Developer Documentation
+site_url: https://sunasty.com/
+repo_url: https://github.com/bsulyan/sunasty-docs
+repo_name: bsulyan/sunasty-docs
+
+theme:
+  name: mkdocs
+
+nav:
+  - Overview: index.md
+  - Color Math & OKLCH: oklch-color-math.md
+  - QR Code & Payloads: qr-payloads.md
