@@ -1,12 +1,35 @@
 site_name: Sunasty Developer Documentation
+site_description: Official technical documentation, architecture guides, and API references for Sunasty open-source libraries and client-side processing tools.
 site_url: https://sunasty.com/
 repo_url: https://github.com/bsulyan/sunasty-docs
 repo_name: bsulyan/sunasty-docs
 
 theme:
   name: mkdocs
+  highlightjs: true
+  hljs_languages:
+    - javascript
+    - typescript
+    - python
+    - rust
+    - go
+    - php
+    - bash
+    - toml
+    - json
 
 nav:
   - Overview: index.md
-  - Color Math & OKLCH: oklch-color-math.md
-  - QR Code & Payloads: qr-payloads.md
+  - Color Math & Accessibility:
+      - Mathematical Concepts: color-math/concepts.md
+      - Multi-Language Quickstart: color-math/quickstart.md
+      - OKLCH Palette Generation: color-math/oklch-palettes.md
+  - QR Code & Payloads:
+      - Payload Schemas: qr/payload-schemas.md
+      - Client-Side TOTP 2FA: qr/totp-generation.md
+      - Multi-Scale Canvas Decoder: qr/canvas-decoding.md
+  - Client-Side Architecture:
+      - In-Browser PDF Engine: architecture/pdf-engine.md
+      - EXIF & C2PA Metadata Sanitization: architecture/metadata-privacy.md
+      - WebAssembly Audio Processing: architecture/audio-processing.md
+  - Ecosystem & Registries: ecosystem.md
