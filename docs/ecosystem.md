@@ -11,6 +11,7 @@ All core mathematical, color conversion, and QR parsing algorithms are open-sour
 | Platform | Package Identifier | Direct Link | Documentation |
 | :--- | :--- | :--- | :--- |
 | **npm (JavaScript / TS)** | `sunasty-color-math` | [npmjs.com/package/sunasty-color-math](https://www.npmjs.com/package/sunasty-color-math) | [API Reference](color-math/quickstart.md#1-javascript-typescript) |
+| **pub.dev (Dart / Flutter)** | `sunasty_color_math` | [pub.dev/packages/sunasty_color_math](https://pub.dev/packages/sunasty_color_math) | [Dart Guide](packages/dart-color-math.md) |
 | **npm (QR Payloads)** | `sunasty-qr-payload` | [npmjs.com/package/sunasty-qr-payload](https://www.npmjs.com/package/sunasty-qr-payload) | [API Reference](qr/payload-schemas.md) |
 | **PyPI (Python)** | `sunasty-color-math` | [pypi.org/project/sunasty-color-math/](https://pypi.org/project/sunasty-color-math/) | [Python Guide](color-math/quickstart.md#2-python) |
 | **crates.io (Rust)** | `sunasty-color-math` | [crates.io/crates/sunasty-color-math](https://crates.io/crates/sunasty-color-math) | [docs.rs/sunasty-color-math](https://docs.rs/sunasty-color-math) |

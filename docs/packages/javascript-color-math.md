@@ -9,7 +9,7 @@ Originally developed for the [Sunasty Color Picker](https://sunasty.com/color-pi
 ## Package Overview
 
 - **npm Registry**: [`sunasty-color-math` on npmjs.com](https://www.npmjs.com/package/sunasty-color-math)
-- **CDN (ESM)**: `https://cdn.jsdelivr.net/gh/bsulyan/sunasty-color-math@1.0.0/index.js`
+- **CDN (ESM)**: `https://cdn.jsdelivr.net/npm/sunasty-color-math@1.0.1/+esm`
 - **Source Code**: [GitHub bsulyan/sunasty-color-math](https://github.com/bsulyan/sunasty-color-math)
 - **License**: MIT
 - **Bundle Size**: Zero external dependencies (< 4 kB minified + gzipped)
@@ -37,7 +37,7 @@ bun add sunasty-color-math
 
 ```html
 <script type="module">
-  import { hexToRgb, computeContrastRatio } from 'https://cdn.jsdelivr.net/gh/bsulyan/sunasty-color-math@1.0.0/index.js';
+  import { hexToRgb, computeContrastRatio } from 'https://cdn.jsdelivr.net/npm/sunasty-color-math@1.0.1/+esm';
   
   const contrast = computeContrastRatio('#0F766E', '#FFFFFF');
   console.log(`Contrast ratio: ${contrast.ratio}:1`);

@@ -9,7 +9,7 @@ Originally developed for the [Sunasty QR Code Scanner & Generator](https://sunas
 ## Package Overview
 
 - **npm Registry**: [`sunasty-qr-payload` on npmjs.com](https://www.npmjs.com/package/sunasty-qr-payload)
-- **CDN (ESM)**: `https://cdn.jsdelivr.net/gh/bsulyan/sunasty-qr-payload@1.0.0/index.js`
+- **CDN (ESM)**: `https://cdn.jsdelivr.net/npm/sunasty-qr-payload@1.0.1/+esm`
 - **Source Code**: [GitHub bsulyan/sunasty-qr-payload](https://github.com/bsulyan/sunasty-qr-payload)
 - **License**: MIT
 - **Dependencies**: 0 external runtime dependencies (< 6 kB minified + gzipped)
@@ -38,7 +38,7 @@ bun add sunasty-qr-payload
 
 ```html
 <script type="module">
-  import { parseQrPayload, generateTotpCode } from 'https://cdn.jsdelivr.net/gh/bsulyan/sunasty-qr-payload@1.0.0/index.js';
+  import { parseQrPayload, generateTotpCode } from 'https://cdn.jsdelivr.net/npm/sunasty-qr-payload@1.0.1/+esm';
 
   const payload = parseQrPayload('WIFI:S:MyNetwork;T:WPA;P:SecretKey123;;');
   console.log(payload);

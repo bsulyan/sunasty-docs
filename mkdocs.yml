@@ -22,6 +22,7 @@ nav:
   - Overview: index.md
   - "Packages by Language":
       - "JavaScript & TypeScript (Color Math)": packages/javascript-color-math.md
+      - "Dart & Flutter (Color Math)": packages/dart-color-math.md
       - "Python (Color Math)": packages/python-color-math.md
       - "Rust (Color Math)": packages/rust-color-math.md
       - "Go (Color Math)": packages/go-color-math.md
