@@ -20,6 +20,13 @@ theme:
 
 nav:
   - Overview: index.md
+  - "Packages by Language":
+      - "JavaScript & TypeScript (Color Math)": packages/javascript-color-math.md
+      - "Python (Color Math)": packages/python-color-math.md
+      - "Rust (Color Math)": packages/rust-color-math.md
+      - "Go (Color Math)": packages/go-color-math.md
+      - "PHP (Color Math)": packages/php-color-math.md
+      - "JavaScript & TypeScript (QR Payload)": packages/javascript-qr-payload.md
   - Color Math & Accessibility:
       - Mathematical Concepts: color-math/concepts.md
       - Multi-Language Quickstart: color-math/quickstart.md
