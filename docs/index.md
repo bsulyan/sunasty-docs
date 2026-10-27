@@ -28,6 +28,7 @@ The core mathematical and parsing engines powering Sunasty are published as zero
 | **`sunasty-color-math-go`** | Go 1.20+ | Go Modules | [pkg.go.dev/github.com/bsulyan/sunasty-color-math-go](https://pkg.go.dev/github.com/bsulyan/sunasty-color-math-go) |
 | **`sunasty/color-math`** | PHP 8.1+ | Composer / Packagist | [Packagist: sunasty/color-math](https://packagist.org/packages/sunasty/color-math) |
 | **`sunasty-qr-payload`** | JavaScript / TypeScript | Node.js / Browser | [npm: sunasty-qr-payload](https://www.npmjs.com/package/sunasty-qr-payload) |
+| **Sunasty QR Scanner** | Browser Extension (MV3) | Chrome / Firefox / Edge | [Chrome Web Store](https://chromewebstore.google.com/detail/sunasty-qr-code-scanner-g/fbiighpklpogdbnhdapbiijcadhlijcb) · [Firefox AMO](https://addons.mozilla.org/en-US/firefox/addon/sunasty-qr-code-scanner-genera/) · [Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/sunasty-qr-code-scanner-generator/npbppaegpbeefpfaffjgphjecmgbngab) |
 
 ## Interactive Web Suites
 
