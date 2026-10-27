@@ -25,7 +25,10 @@ All core mathematical, color conversion, and QR parsing algorithms are open-sour
 
 Engineered for Chrome, Brave, and Edge with zero external network requests:
 
-- **[Sunasty QR Code Scanner & Generator](https://chromewebstore.google.com/detail/sunasty-qr-code-scanner-g/fbiighpklpogdbnhdapbiijcadhlijcb)**: Capture visible tabs, scan multi-QR codes with overlapping canvas tiles, and generate vector codes.
+- **Sunasty QR Code Scanner & Generator**: Capture visible tabs, scan multi-QR codes with overlapping canvas tiles, and generate vector codes:
+  - [Chrome Web Store](https://chromewebstore.google.com/detail/sunasty-qr-code-scanner-g/fbiighpklpogdbnhdapbiijcadhlijcb)
+  - [Firefox Add-ons (AMO)](https://addons.mozilla.org/en-US/firefox/addon/sunasty-qr-code-scanner-genera/) ([FR](https://addons.mozilla.org/fr/firefox/addon/sunasty-qr-code-scanner-genera/))
+  - [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/sunasty-qr-code-scanner-generator/npbppaegpbeefpfaffjgphjecmgbngab)
 - **[Sunasty Eyedropper & Color Converter](https://github.com/bsulyan/sunasty-color-picker)**: Pick screen pixels, convert sRGB to OKLCH, and test WCAG 2.1 contrast live.
 
 ---
