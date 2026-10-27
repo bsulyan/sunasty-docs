@@ -23,7 +23,8 @@ The core mathematical and parsing engines powering Sunasty are published as zero
 | :--- | :--- | :--- | :--- |
 | **`sunasty-color-math`** | JavaScript / TypeScript | Node.js / Browser | [npm: sunasty-color-math](https://www.npmjs.com/package/sunasty-color-math) |
 | **`sunasty-color-math`** | Python 3.8+ | PyPI | [PyPI: sunasty-color-math](https://pypi.org/project/sunasty-color-math/) |
-| **`sunasty-color-math`** | Rust 2021 | Cargo / crates.io | [crates.io: sunasty-color-math](https://crates.io/crates/sunasty-color-math) |
+| **`sunasty-color-math`** | Rust 2021 | Cargo / crates.io / docs.rs | [crates.io](https://crates.io/crates/sunasty-color-math) · [docs.rs API](https://docs.rs/sunasty-color-math/latest/sunasty_color_math/) |
+| **`sunasty_color_math`** | Dart 3 / Flutter | pub.dev | [pub.dev: sunasty_color_math](https://pub.dev/packages/sunasty_color_math) ([publisher: sunasty.com](https://pub.dev/publishers/sunasty.com)) |
 | **`sunasty-color-math-go`** | Go 1.20+ | Go Modules | [pkg.go.dev/github.com/bsulyan/sunasty-color-math-go](https://pkg.go.dev/github.com/bsulyan/sunasty-color-math-go) |
 | **`sunasty/color-math`** | PHP 8.1+ | Composer / Packagist | [Packagist: sunasty/color-math](https://packagist.org/packages/sunasty/color-math) |
 | **`sunasty-qr-payload`** | JavaScript / TypeScript | Node.js / Browser | [npm: sunasty-qr-payload](https://www.npmjs.com/package/sunasty-qr-payload) |
