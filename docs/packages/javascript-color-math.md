@@ -1,6 +1,6 @@
-# sunasty-color-math (JavaScript & TypeScript)
+# oklch-wcag (`@sunasty/color-math` on JSR)
 
-Official documentation for the `sunasty-color-math` npm package. A zero-dependency, tree-shakeable utility library for sRGB, HSL, and OKLCH color space conversions, relative luminance, automated accessible palette generation, and WCAG 2.1 contrast calculations.
+Official documentation for the `oklch-wcag` npm package (also published on JSR as `@sunasty/color-math`). A zero-dependency, tree-shakeable utility library for sRGB, HSL, and OKLCH color space conversions, relative luminance, automated accessible palette generation, and WCAG 2.1 contrast calculations.
 
 Originally developed for the [Sunasty Color Picker](https://sunasty.com/color-picker/) client-side tool and the [Sunasty Developer Suite](https://sunasty.com/dev/).
 
@@ -8,8 +8,9 @@ Originally developed for the [Sunasty Color Picker](https://sunasty.com/color-pi
 
 ## Package Overview
 
-- **npm Registry**: [`sunasty-color-math` on npmjs.com](https://www.npmjs.com/package/sunasty-color-math)
-- **CDN (ESM)**: `https://cdn.jsdelivr.net/npm/sunasty-color-math@1.0.1/+esm`
+- **npm Registry**: [`oklch-wcag` on npmjs.com](https://www.npmjs.com/package/oklch-wcag)
+- **JSR Registry**: [`@sunasty/color-math` on jsr.io](https://jsr.io/@sunasty/color-math)
+- **CDN (ESM)**: `https://cdn.jsdelivr.net/npm/oklch-wcag@1.0.0/+esm`
 - **Source Code**: [GitHub bsulyan/sunasty-color-math](https://github.com/bsulyan/sunasty-color-math)
 - **License**: MIT
 - **Bundle Size**: Zero external dependencies (< 4 kB minified + gzipped)
@@ -21,23 +22,23 @@ Originally developed for the [Sunasty Color Picker](https://sunasty.com/color-pi
 
 ```bash
 # npm
-npm install sunasty-color-math
+npm install oklch-wcag
 
 # pnpm
-pnpm add sunasty-color-math
+pnpm add oklch-wcag
 
 # yarn
-yarn add sunasty-color-math
+yarn add oklch-wcag
 
 # bun
-bun add sunasty-color-math
+bun add oklch-wcag
 ```
 
 ### Direct Browser Import (ESM CDN)
 
 ```html
 <script type="module">
-  import { hexToRgb, computeContrastRatio } from 'https://cdn.jsdelivr.net/npm/sunasty-color-math@1.0.1/+esm';
+  import { hexToRgb, computeContrastRatio } from 'https://cdn.jsdelivr.net/npm/oklch-wcag@1.0.0/+esm';
   
   const contrast = computeContrastRatio('#0F766E', '#FFFFFF');
   console.log(`Contrast ratio: ${contrast.ratio}:1`);
@@ -54,7 +55,7 @@ bun add sunasty-color-math
 Parses a 3-character (`#fff`) or 6-character (`#ffffff`) hexadecimal color string. Tolerates leading whitespace and optional leading `#`. Returns `{ r: number, g: number, b: number }` with values between `0` and `255`, or `null` if invalid.
 
 ```typescript
-import { hexToRgb } from 'sunasty-color-math';
+import { hexToRgb } from 'oklch-wcag';
 
 const rgb = hexToRgb('#0F766E');
 // => { r: 15, g: 118, b: 110 }
@@ -64,7 +65,7 @@ const rgb = hexToRgb('#0F766E');
 Converts 8-bit RGB integers to a lowercase 6-digit hex string with `#`. Automatically clamps values to `[0, 255]`.
 
 ```typescript
-import { rgbToHex } from 'sunasty-color-math';
+import { rgbToHex } from 'oklch-wcag';
 
 const hex = rgbToHex(15, 118, 110);
 // => "#0f766e"
@@ -89,7 +90,7 @@ Returns:
 - `h`: Hue angle in degrees in $[0.0, 360.0)$.
 
 ```typescript
-import { rgbToOklch } from 'sunasty-color-math';
+import { rgbToOklch } from 'oklch-wcag';
 
 const oklch = rgbToOklch(15, 118, 110);
 console.log(`L=${oklch.L.toFixed(3)}, C=${oklch.C.toFixed(3)}, h=${oklch.h.toFixed(1)}°`);
@@ -115,7 +116,7 @@ Computes the WCAG 2.1 relative luminance $L \in [0.0, 1.0]$ using IEC 61966-2-1 
 $$L = 0.2126 \cdot R_{\text{lin}} + 0.7152 \cdot G_{\text{lin}} + 0.0722 \cdot B_{\text{lin}}$$
 
 ```typescript
-import { relativeLuminance } from 'sunasty-color-math';
+import { relativeLuminance } from 'oklch-wcag';
 
 const lum = relativeLuminance(15, 118, 110);
 console.log(`Luminance: ${lum.toFixed(4)}`);
@@ -125,7 +126,7 @@ console.log(`Luminance: ${lum.toFixed(4)}`);
 Calculates the exact contrast ratio between two hex colors and evaluates WCAG AA and AAA conformance.
 
 ```typescript
-import { computeContrastRatio } from 'sunasty-color-math';
+import { computeContrastRatio } from 'oklch-wcag';
 
 const result = computeContrastRatio('#0F766E', '#FFFFFF');
 console.log(result);
@@ -142,7 +143,7 @@ console.log(result);
 Performs an automated binary search in OKLCH perceptual lightness space to adjust the foreground color until it achieves the required contrast ratio against the background, preserving the original hue and saturation.
 
 ```typescript
-import { autoFixContrastForAA } from 'sunasty-color-math';
+import { autoFixContrastForAA } from 'oklch-wcag';
 
 // Automatically darken cyan on white to guarantee 4.5:1
 const fixedColor = autoFixContrastForAA('#38BDF8', '#FFFFFF', 4.5);
@@ -157,7 +158,7 @@ console.log(`Accessible foreground: ${fixedColor}`);
 Generates a 10-step perceptual tonal palette (`50`, `100`, `200`, `300`, `400`, `500`, `600`, `700`, `800`, `900`, `950`) centered around the input color.
 
 ```typescript
-import { generateShadesScale } from 'sunasty-color-math';
+import { generateShadesScale } from 'oklch-wcag';
 
 const scale = generateShadesScale(15, 118, 110);
 scale.forEach(s => console.log(`${s.step}: ${s.hex}`));
@@ -167,7 +168,7 @@ scale.forEach(s => console.log(`${s.step}: ${s.hex}`));
 Computes the minimum Euclidean distance in Oklab space to find the closest match in the Tailwind CSS default palette:
 
 ```typescript
-import { findClosestTailwindShade } from 'sunasty-color-math';
+import { findClosestTailwindShade } from 'oklch-wcag';
 
 const match = findClosestTailwindShade(15, 118, 110);
 console.log(`Closest Tailwind class: ${match.name} (${match.hex})`);
@@ -178,7 +179,7 @@ console.log(`Closest Tailwind class: ${match.name} (${match.hex})`);
 Generates color wheel harmonies (complementary $180^\circ$, analogous $\pm 30^\circ$, triadic $\pm 120^\circ$) using constant OKLCH lightness:
 
 ```typescript
-import { generateHarmonies } from 'sunasty-color-math';
+import { generateHarmonies } from 'oklch-wcag';
 
 const harmonies = generateHarmonies(15, 118, 110);
 console.log(`Complementary: ${harmonies.complementary}`);
