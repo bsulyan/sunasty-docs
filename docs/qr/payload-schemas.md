@@ -1,8 +1,8 @@
 # QR Code Payload Schemas
 
-The `sunasty-qr-payload` library parses structured text content found inside QR codes into strongly-typed objects. It operates 100% locally without external dependencies or network requests.
+The `qr-payload-parser` (`@sunasty/qr-payload` on JSR) library parses structured text content found inside QR codes into strongly-typed objects. It operates 100% locally without external dependencies or network requests.
 
-Published on npm: [`sunasty-qr-payload`](https://www.npmjs.com/package/sunasty-qr-payload)
+Published on npm: [`qr-payload-parser`](https://www.npmjs.com/package/qr-payload-parser) (JSR: [`@sunasty/qr-payload`](https://jsr.io/@sunasty/qr-payload))
 
 ## Supported Schemas
 
@@ -82,7 +82,7 @@ END:VCARD
 ## TypeScript Parsing Example
 
 ```typescript
-import { parseQrPayload } from 'sunasty-qr-payload';
+import { parseQrPayload } from 'qr-payload-parser';
 
 // 1. Parse Wi-Fi
 const wifi = parseQrPayload('WIFI:T:WPA;S:SunastyOffice;P:SuperSecretPass;H:false;;');
