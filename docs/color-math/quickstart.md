@@ -6,11 +6,11 @@ The `sunasty-color-math` algorithm is published in five official language implem
 
 ## 1. JavaScript & TypeScript
 
-Published on npm as [`sunasty-color-math`](https://www.npmjs.com/package/sunasty-color-math). Compatible with Node.js, Bun, Deno, and modern browsers.
+Published on npm as [`oklch-wcag`](https://www.npmjs.com/package/oklch-wcag) (and on JSR as [`@sunasty/color-math`](https://jsr.io/@sunasty/color-math)). Compatible with Node.js, Bun, Deno, and modern browsers.
 
 ### Installation
 ```bash
-npm install sunasty-color-math
+npm install oklch-wcag
 ```
 
 ### Usage Example
@@ -23,7 +23,7 @@ import {
   checkWcag, 
   rgbToOklch, 
   oklchToRgb 
-} from 'sunasty-color-math';
+} from 'oklch-wcag';
 
 // 1. Parse Hex Colors
 const brandTeal = hexToRgb('#0F766E'); // [15, 118, 110]
