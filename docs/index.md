@@ -1,51 +1,55 @@
 # Sunasty Developer Documentation
 
-Welcome to the official developer documentation and technical architecture reference for **Sunasty** libraries, client-side algorithms, and developer tools.
+Welcome to the official developer documentation and technical architecture reference for **Sunasty** libraries, client-side algorithms, and 233 browser-local tools across 32 languages.
 
 ## The Zero-Knowledge Client-Side Philosophy
 
-Sunasty is designed around a strict architectural invariant: **all computation is performed entirely on the client's device**. 
+Sunasty is designed around a strict architectural invariant: **all computation is performed entirely on the client's device**.
 
-Whether parsing PDF documents, inspecting EXIF metadata, demuxing audio tracks, or computing OKLCH contrast ratios, zero bytes of user data ever leave the browser. By leveraging standard Web APIs (HTML5 Canvas, Web Crypto API, TypedArray buffers, Web Workers) and WebAssembly, Sunasty delivers native-speed processing with complete data privacy.
+Whether parsing PDF documents, stripping EXIF/C2PA/HAR secrets, viewing Parquet or SQLite tables, demuxing audio tracks, encoding vector barcodes, or computing OKLCH contrast ratios, zero bytes of user data ever leave the browser. By using standard Web APIs (HTML5 Canvas, Web Crypto API, TypedArray buffers, Web Workers) and WebAssembly, Sunasty delivers fast local processing with complete data privacy.
 
 ```mermaid
 graph LR
-    UserFile["User File (PDF, Image, Audio)"] --> ClientEngine["Sunasty Client Engine<br/>(WASM / Web Workers / Web Crypto)"]
-    ClientEngine --> LocalResult["Processed Output<br/>(In-Memory Blob / Canvas)"]
+    UserFile["User File (PDF, Image, Audio, HAR, Parquet)"] --> ClientEngine["Sunasty Client Engine<br/>(WASM / Web Workers / Web Crypto)"]
+    ClientEngine --> LocalResult["Processed Output<br/>(In-Memory Blob / SVG / Canvas)"]
     ClientEngine -. No Network Transfer .-> RemoteServer["No Remote Server Upload"]
 ```
 
 ## Open-Source Packages Overview
 
-The core mathematical and parsing engines powering Sunasty are published as zero-dependency open-source packages across major package registries:
+The core mathematical, sanitization, and parsing engines powering Sunasty are published as zero-dependency MIT libraries across major package registries:
 
 | Package | Language | Ecosystem | Registry Link |
 | :--- | :--- | :--- | :--- |
-| **`sunasty-color-math`** | JavaScript / TypeScript | Node.js / Browser | [npm: sunasty-color-math](https://www.npmjs.com/package/sunasty-color-math) |
+| **`sunasty-har-sanitizer`** | JS / TS | npm · JSR · GitHub | [npm](https://www.npmjs.com/package/sunasty-har-sanitizer) · [JSR `@sunasty/har-sanitizer`](https://jsr.io/@sunasty/har-sanitizer) · [GitHub](https://github.com/bsulyan/sunasty-har-sanitizer) |
+| **`sunasty-tournament-math`** | JS / TS | npm · JSR · GitHub | [npm](https://www.npmjs.com/package/sunasty-tournament-math) · [JSR `@sunasty/tournament-math`](https://jsr.io/@sunasty/tournament-math) · [GitHub](https://github.com/bsulyan/sunasty-tournament-math) |
+| **`sunasty-code128-svg`** | JS / TS | npm · JSR · GitHub | [npm](https://www.npmjs.com/package/sunasty-code128-svg) · [JSR `@sunasty/code128-svg`](https://jsr.io/@sunasty/code128-svg) · [GitHub](https://github.com/bsulyan/sunasty-code128-svg) |
+| **`sunasty-color-math`** | JS / TS | npm · JSR · GitHub | [npm](https://www.npmjs.com/package/sunasty-color-math) · [JSR `@sunasty/color-math`](https://jsr.io/@sunasty/color-math) · [GitHub](https://github.com/bsulyan/sunasty-color-math) |
+| **`sunasty-qr-payload`** | JS / TS | npm · JSR · GitHub | [npm](https://www.npmjs.com/package/sunasty-qr-payload) · [JSR `@sunasty/qr-payload`](https://jsr.io/@sunasty/qr-payload) · [GitHub](https://github.com/bsulyan/sunasty-qr-payload) |
 | **`sunasty-color-math`** | Python 3.8+ | PyPI | [PyPI: sunasty-color-math](https://pypi.org/project/sunasty-color-math/) |
 | **`sunasty-color-math`** | Rust 2021 | Cargo / crates.io / docs.rs | [crates.io](https://crates.io/crates/sunasty-color-math) · [docs.rs API](https://docs.rs/sunasty-color-math/latest/sunasty_color_math/) |
 | **`sunasty_color_math`** | Dart 3 / Flutter | pub.dev | [pub.dev: sunasty_color_math](https://pub.dev/packages/sunasty_color_math) ([publisher: sunasty.com](https://pub.dev/publishers/sunasty.com)) |
 | **`sunasty-color-math-go`** | Go 1.20+ | Go Modules | [pkg.go.dev/github.com/bsulyan/sunasty-color-math-go](https://pkg.go.dev/github.com/bsulyan/sunasty-color-math-go) |
 | **`sunasty/color-math`** | PHP 8.1+ | Composer / Packagist | [Packagist: sunasty/color-math](https://packagist.org/packages/sunasty/color-math) |
-| **`sunasty-qr-payload`** | JavaScript / TypeScript | Node.js / Browser | [npm: sunasty-qr-payload](https://www.npmjs.com/package/sunasty-qr-payload) |
-| **Sunasty QR Scanner** | Browser Extension (MV3) | Chrome / Firefox / Edge | [Chrome Web Store](https://chromewebstore.google.com/detail/sunasty-qr-code-scanner-g/fbiighpklpogdbnhdapbiijcadhlijcb) · [Firefox AMO](https://addons.mozilla.org/en-US/firefox/addon/sunasty-qr-code-scanner-genera/) · [Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/sunasty-qr-code-scanner-generator/npbppaegpbeefpfaffjgphjecmgbngab) |
+| **Sunasty QR Scanner** | MV3 Extension | Chrome / Firefox / Edge | [Chrome Web Store](https://chromewebstore.google.com/detail/sunasty-qr-code-scanner-g/fbiighpklpogdbnhdapbiijcadhlijcb) · [Firefox AMO](https://addons.mozilla.org/en-US/firefox/addon/sunasty-qr-code-scanner-genera/) · [Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/sunasty-qr-code-scanner-generator/npbppaegpbeefpfaffjgphjecmgbngab) |
 
 ## Interactive Web Suites
 
-The algorithms documented here can be explored and tested interactively through Sunasty's web applications:
+The algorithms documented here power Sunasty's 233 client-side web tools at [sunasty.com](https://sunasty.com/):
 
-- **[Sunasty Color Picker & Palette Extractor](https://sunasty.com/color-picker/)**: Live eyedropper, OKLCH converter, accessible palette generator, and WCAG contrast checker.
-- **[Sunasty Contrast Checker](https://sunasty.com/contrast-checker/)**: Automated contrast verification with live foreground/background simulation.
-- **[Sunasty QR Code Scanner](https://sunasty.com/qr-scan/)**: Multi-scale offline QR decoder supporting Wi-Fi, vCard, and TOTP payloads.
-- **[Sunasty QR Code Generator](https://sunasty.com/qr-code/)**: High-density vector (SVG) and raster (PNG) QR generator.
-- **[Sunasty PDF Toolkit](https://sunasty.com/pdf/)**: Client-side [merge](https://sunasty.com/pdf-merge/), [compress](https://sunasty.com/pdf-compress/), and [metadata](https://sunasty.com/pdf-metadata/) utilities.
-- **[Sunasty Privacy & EXIF Inspector](https://sunasty.com/exif-reader/)**: Local metadata extraction and stripping for JPEG, PNG, and C2PA manifests.
-- **[Sunasty Developer Suite](https://sunasty.com/dev/)**: In-browser tools for JSON formatting, regex testing, hash generation, and color transforms.
-- **[Ulysan Studio](https://ulysan.fr/)**: Digital engineering studio behind Sunasty and creator of [Solitaire for Android](https://ulysan.fr/solitaire/).
+- **[Sunasty HAR Sanitizer](https://sunasty.com/har-sanitizer/)**: Client-side HAR 1.2 secret redaction and waterfall inspection.
+- **[Sunasty Tournament Calculator](https://sunasty.com/tournament-calculator/)**: Swiss round tables, Top Cut probabilities, and OMW% Monte-Carlo tiebreak simulation.
+- **[Sunasty Barcode Generator](https://sunasty.com/barcode-generator/)**: Code 128B/C, EAN-13, UPC-A, Code 39, and ITF-14 vector SVG generation plus [CSV label sheets](https://sunasty.com/csv-label-sheet/).
+- **[Sunasty Color Picker & Contrast Checker](https://sunasty.com/color-picker/)**: Live eyedropper, OKLCH conversion, and [WCAG 2.1 verification](https://sunasty.com/contrast-checker/).
+- **[Sunasty QR Scanner](https://sunasty.com/qr-scan/) & [QR Generator](https://sunasty.com/qr-code/)**: Multi-scale local QR decoding (Wi-Fi, vCard, TOTP) and vector QR rendering.
+- **[Sunasty PDF Toolkit](https://sunasty.com/pdf/)**: Client-side [merge](https://sunasty.com/pdf-merge/), [compress](https://sunasty.com/pdf-compress/), [metadata](https://sunasty.com/pdf-metadata/), and [TCG proxy print sheets](https://sunasty.com/tcg-proxy-print/).
+- **[Sunasty Privacy & Forensics](https://sunasty.com/exif-reader/)**: Local EXIF/GPS inspection and [C2PA Content Credentials verification](https://sunasty.com/c2pa-reader/).
+- **[Sunasty Developer Suite](https://sunasty.com/dev/)**: Browser-local [Parquet Viewer](https://sunasty.com/parquet-viewer/), [SQLite Viewer](https://sunasty.com/sqlite-viewer/), [JSON Diff](https://sunasty.com/json-diff/), regex tester, and formatters.
+- **[Ulysan Studio](https://ulysan.fr/)**: Independent engineering studio behind Sunasty and creator of [Solitaire for Android](https://ulysan.fr/solitaire/).
 
 ## Documentation Sections
 
 1. **[Color Math & Accessibility](color-math/concepts.md)**: sRGB linearization, WCAG 2.1 contrast formulas, OKLCH perceptual color space, and multi-language implementation guides.
 2. **[QR Code & Payloads](qr/payload-schemas.md)**: Specifications for Wi-Fi, vCard, and TOTP QR payloads with in-browser Web Crypto HMAC evaluation.
 3. **[Client-Side Architecture](architecture/pdf-engine.md)**: Engineering deep dives into client-side PDF manipulation, EXIF/C2PA stripping, and WebAssembly audio processing.
-4. **[Ecosystem & Registries](ecosystem.md)**: Summary of all distribution channels, browser extensions, and developer resources.
+4. **[Ecosystem & Registries](ecosystem.md)**: Summary of all distribution channels, browser extensions, packages, and developer resources.
