@@ -1,6 +1,6 @@
-# sunasty-qr-payload (JavaScript & TypeScript)
+# qr-payload-parser (`@sunasty/qr-payload` on JSR)
 
-Official documentation for the `sunasty-qr-payload` npm package. A zero-dependency, tree-shakeable parser and utility library for QR code payloads (Wi-Fi, 2FA TOTP, vCard, mailto, SMS, tel, and URL security inspection), Web Crypto RFC 6238 TOTP code generation, canvas image preprocessing, and scan history serialization.
+Official documentation for the `qr-payload-parser` npm package (also published on JSR as `@sunasty/qr-payload`). A zero-dependency, tree-shakeable parser and utility library for QR code payloads (Wi-Fi, 2FA TOTP, vCard, mailto, SMS, tel, and URL security inspection), Web Crypto RFC 6238 TOTP code generation, canvas image preprocessing, and scan history serialization.
 
 Originally developed for the [Sunasty QR Code Scanner & Generator](https://sunasty.com/qr-scan/), the [Sunasty QR Generator](https://sunasty.com/qr-code/), and the [Sunasty QR Scanner Chrome Extension](https://github.com/bsulyan/sunasty-qr-scanner).
 
@@ -8,8 +8,9 @@ Originally developed for the [Sunasty QR Code Scanner & Generator](https://sunas
 
 ## Package Overview
 
-- **npm Registry**: [`sunasty-qr-payload` on npmjs.com](https://www.npmjs.com/package/sunasty-qr-payload)
-- **CDN (ESM)**: `https://cdn.jsdelivr.net/npm/sunasty-qr-payload@1.0.1/+esm`
+- **npm Registry**: [`qr-payload-parser` on npmjs.com](https://www.npmjs.com/package/qr-payload-parser)
+- **JSR Registry**: [`@sunasty/qr-payload` on jsr.io](https://jsr.io/@sunasty/qr-payload)
+- **CDN (ESM)**: `https://cdn.jsdelivr.net/npm/qr-payload-parser@1.0.0/+esm`
 - **Source Code**: [GitHub bsulyan/sunasty-qr-payload](https://github.com/bsulyan/sunasty-qr-payload)
 - **License**: MIT
 - **Dependencies**: 0 external runtime dependencies (< 6 kB minified + gzipped)
@@ -22,23 +23,23 @@ Originally developed for the [Sunasty QR Code Scanner & Generator](https://sunas
 
 ```bash
 # npm
-npm install sunasty-qr-payload
+npm install qr-payload-parser
 
 # pnpm
-pnpm add sunasty-qr-payload
+pnpm add qr-payload-parser
 
 # yarn
-yarn add sunasty-qr-payload
+yarn add qr-payload-parser
 
 # bun
-bun add sunasty-qr-payload
+bun add qr-payload-parser
 ```
 
 ### Direct Browser Import (ESM CDN)
 
 ```html
 <script type="module">
-  import { parseQrPayload, generateTotpCode } from 'https://cdn.jsdelivr.net/npm/sunasty-qr-payload@1.0.1/+esm';
+  import { parseQrPayload, generateTotpCode } from 'https://cdn.jsdelivr.net/npm/qr-payload-parser@1.0.0/+esm';
 
   const payload = parseQrPayload('WIFI:S:MyNetwork;T:WPA;P:SecretKey123;;');
   console.log(payload);
@@ -64,7 +65,7 @@ Detects and parses raw decoded QR text into a typed discrimination union:
 - `kind: 'text'`
 
 ```typescript
-import { parseQrPayload } from 'sunasty-qr-payload';
+import { parseQrPayload } from 'qr-payload-parser';
 
 const result = parseQrPayload('WIFI:S:OfficeWifi;T:WPA;P:SuperSecretPass;;');
 
@@ -141,7 +142,7 @@ Supports `tel:+123456789`.
 Performs safety and protocol validation on scanned URLs to alert users about potential phishing, insecure plain HTTP, or raw IP address destinations before navigation.
 
 ```typescript
-import { analyzeUrlSecurity } from 'sunasty-qr-payload';
+import { analyzeUrlSecurity } from 'qr-payload-parser';
 
 const sec = analyzeUrlSecurity('http://192.168.1.1/login');
 console.log(sec);
@@ -171,7 +172,7 @@ Returns:
 - `counter`: Unix epoch step index.
 
 ```typescript
-import { generateTotpCode } from 'sunasty-qr-payload';
+import { generateTotpCode } from 'qr-payload-parser';
 
 const totp = await generateTotpCode('JBSWY3DPEHPK3PXP');
 console.log(`Current Code: ${totp.code} (Expires in ${totp.remainingSeconds}s)`);
@@ -184,7 +185,7 @@ Decodes an RFC 4648 Base32 secret string into a raw byte buffer for HMAC-SHA1 si
 
 ### 4. Image Preprocessing for Difficult QR Codes
 
-When decoding QR codes from blurry mobile camera feeds, low-contrast document scans, or dark-mode screens, standard decoders (like `jsQR`) frequently fail. `sunasty-qr-payload` exports canvas pixel preprocessing algorithms:
+When decoding QR codes from blurry mobile camera feeds, low-contrast document scans, or dark-mode screens, standard decoders (like `jsQR`) frequently fail. `qr-payload-parser` exports canvas pixel preprocessing algorithms:
 
 #### `applyHighContrastThreshold(data: Uint8ClampedArray, threshold?: number, invert?: boolean): Uint8ClampedArray`
 Converts RGBA pixel buffer to a high-contrast binary map with optional color inversion (essential for light-on-dark inverted QR codes).
@@ -209,7 +210,7 @@ Computes luminance min/max bounds across the image buffer and dynamically stretc
 Exports an array of scan history entries into an RFC 4180 compliant CSV string with escaped delimiters.
 
 ```typescript
-import { serializeScanHistoryToCsv } from 'sunasty-qr-payload';
+import { serializeScanHistoryToCsv } from 'qr-payload-parser';
 
 const csv = serializeScanHistoryToCsv([
   { timestamp: '2026-10-24T12:00:00Z', type: 'WIFI', data: 'WIFI:S:Guest;;' },
@@ -225,7 +226,7 @@ Serializes records into formatted JSON with indentation.
 ## Practical Example: End-to-End Scan & 2FA Flow
 
 ```typescript
-import { parseQrPayload, generateTotpCode } from 'sunasty-qr-payload';
+import { parseQrPayload, generateTotpCode } from 'qr-payload-parser';
 
 // Raw string extracted from a camera feed or image file
 const rawQrString = 'otpauth://totp/Sunasty:admin@sunasty.com?secret=HXDMVJECJJWSRB3HWIZR4IFUGFTMXBOZ&issuer=Sunasty';
@@ -252,7 +253,7 @@ if (payload.kind === 'totp') {
 ```javascript
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { parseQrPayload, generateTotpCode, analyzeUrlSecurity } from 'sunasty-qr-payload';
+import { parseQrPayload, generateTotpCode, analyzeUrlSecurity } from 'qr-payload-parser';
 
 test('parses wifi payload', () => {
   const result = parseQrPayload('WIFI:S:MyNet;T:WPA;P:Pass123;;');
