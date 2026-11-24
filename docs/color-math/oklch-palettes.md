@@ -2,7 +2,7 @@
 
 A common challenge in design systems is generating color tints and shades that are guaranteed to pass WCAG 2.1 accessibility criteria without washing out the brand identity. Traditional HSL lightness scaling produces inconsistent contrast because different hues have drastically different perceived brightness.
 
-The `sunasty-color-math` algorithm solves this by combining the **OKLCH perceptual model** with a **binary search optimization** on lightness $L$.
+The `oklch-wcag` / `sunasty-color-math` algorithm solves this by combining the **OKLCH perceptual model** with a **binary search optimization** on lightness $L$.
 
 ## The Auto-Fix Algorithm
 
@@ -42,7 +42,7 @@ import {
   contrastRatio, 
   hexToRgb, 
   rgbToHex 
-} from 'sunasty-color-math';
+} from 'oklch-wcag';
 
 interface AccessibleColorResult {
   hex: string;
