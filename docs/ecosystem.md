@@ -10,15 +10,15 @@ All core mathematical, sanitization, barcode, color, and QR parsing engines are 
 
 | Platform | Package Identifier | Direct Link | Notes / Docs |
 | :--- | :--- | :--- | :--- |
-| **npm (HAR Sanitizer)** | `sunasty-har-sanitizer` | [npmjs.com/package/sunasty-har-sanitizer](https://www.npmjs.com/package/sunasty-har-sanitizer) | [Technical Note](https://bsulyan.github.io/notes/client-side-har-sanitization/) |
+| **npm (HAR Sanitizer)** | `har-clean` | [npmjs.com/package/har-clean](https://www.npmjs.com/package/har-clean) | [Technical Note](https://bsulyan.github.io/notes/client-side-har-sanitization/) |
 | **JSR (HAR Sanitizer)** | `@sunasty/har-sanitizer` | [jsr.io/@sunasty/har-sanitizer](https://jsr.io/@sunasty/har-sanitizer) | [Web Tool](https://sunasty.com/har-sanitizer/) |
-| **npm (Tournament Math)** | `sunasty-tournament-math` | [npmjs.com/package/sunasty-tournament-math](https://www.npmjs.com/package/sunasty-tournament-math) | [Technical Note](https://bsulyan.github.io/notes/swiss-tournament-tiebreak-math/) |
+| **npm (Tournament Math)** | `swiss-math` | [npmjs.com/package/swiss-math](https://www.npmjs.com/package/swiss-math) | [Technical Note](https://bsulyan.github.io/notes/swiss-tournament-tiebreak-math/) |
 | **JSR (Tournament Math)** | `@sunasty/tournament-math` | [jsr.io/@sunasty/tournament-math](https://jsr.io/@sunasty/tournament-math) | [Web Tool](https://sunasty.com/tournament-calculator/) |
-| **npm (Code 128 SVG)** | `sunasty-code128-svg` | [npmjs.com/package/sunasty-code128-svg](https://www.npmjs.com/package/sunasty-code128-svg) | [Technical Note](https://bsulyan.github.io/notes/code128-vector-svg-encoding/) |
+| **npm (Code 128 SVG)** | `barcode128-svg` | [npmjs.com/package/barcode128-svg](https://www.npmjs.com/package/barcode128-svg) | [Technical Note](https://bsulyan.github.io/notes/code128-vector-svg-encoding/) |
 | **JSR (Code 128 SVG)** | `@sunasty/code128-svg` | [jsr.io/@sunasty/code128-svg](https://jsr.io/@sunasty/code128-svg) | [Web Tool](https://sunasty.com/barcode-generator/) |
-| **npm (Color Math)** | `sunasty-color-math` | [npmjs.com/package/sunasty-color-math](https://www.npmjs.com/package/sunasty-color-math) | [API Reference](color-math/quickstart.md#1-javascript-typescript) |
+| **npm (Color Math)** | `oklch-wcag` | [npmjs.com/package/oklch-wcag](https://www.npmjs.com/package/oklch-wcag) | [API Reference](color-math/quickstart.md#1-javascript-typescript) |
 | **JSR (Color Math)** | `@sunasty/color-math` | [jsr.io/@sunasty/color-math](https://jsr.io/@sunasty/color-math) | [Web Tool](https://sunasty.com/color-picker/) |
-| **npm (QR Payloads)** | `sunasty-qr-payload` | [npmjs.com/package/sunasty-qr-payload](https://www.npmjs.com/package/sunasty-qr-payload) | [API Reference](qr/payload-schemas.md) |
+| **npm (QR Payloads)** | `qr-payload-parser` | [npmjs.com/package/qr-payload-parser](https://www.npmjs.com/package/qr-payload-parser) | [API Reference](qr/payload-schemas.md) |
 | **JSR (QR Payloads)** | `@sunasty/qr-payload` | [jsr.io/@sunasty/qr-payload](https://jsr.io/@sunasty/qr-payload) | [Web Tool](https://sunasty.com/qr-scan/) |
 | **pub.dev (Dart / Flutter)** | `sunasty_color_math` | [pub.dev/packages/sunasty_color_math](https://pub.dev/packages/sunasty_color_math) | [Dart Guide](packages/dart-color-math.md) |
 | **PyPI (Python)** | `sunasty-color-math` | [pypi.org/project/sunasty-color-math/](https://pypi.org/project/sunasty-color-math/) | [Python Guide](color-math/quickstart.md#2-python) |
