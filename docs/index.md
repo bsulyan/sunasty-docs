@@ -21,11 +21,11 @@ The core mathematical, sanitization, and parsing engines powering Sunasty are pu
 
 | Package | Language | Ecosystem | Registry Link |
 | :--- | :--- | :--- | :--- |
-| **`sunasty-har-sanitizer`** | JS / TS | npm · JSR · GitHub | [npm](https://www.npmjs.com/package/sunasty-har-sanitizer) · [JSR `@sunasty/har-sanitizer`](https://jsr.io/@sunasty/har-sanitizer) · [GitHub](https://github.com/bsulyan/sunasty-har-sanitizer) |
-| **`sunasty-tournament-math`** | JS / TS | npm · JSR · GitHub | [npm](https://www.npmjs.com/package/sunasty-tournament-math) · [JSR `@sunasty/tournament-math`](https://jsr.io/@sunasty/tournament-math) · [GitHub](https://github.com/bsulyan/sunasty-tournament-math) |
-| **`sunasty-code128-svg`** | JS / TS | npm · JSR · GitHub | [npm](https://www.npmjs.com/package/sunasty-code128-svg) · [JSR `@sunasty/code128-svg`](https://jsr.io/@sunasty/code128-svg) · [GitHub](https://github.com/bsulyan/sunasty-code128-svg) |
-| **`sunasty-color-math`** | JS / TS | npm · JSR · GitHub | [npm](https://www.npmjs.com/package/sunasty-color-math) · [JSR `@sunasty/color-math`](https://jsr.io/@sunasty/color-math) · [GitHub](https://github.com/bsulyan/sunasty-color-math) |
-| **`sunasty-qr-payload`** | JS / TS | npm · JSR · GitHub | [npm](https://www.npmjs.com/package/sunasty-qr-payload) · [JSR `@sunasty/qr-payload`](https://jsr.io/@sunasty/qr-payload) · [GitHub](https://github.com/bsulyan/sunasty-qr-payload) |
+| **`har-clean`** | JS / TS | npm · JSR · GitHub | [npm](https://www.npmjs.com/package/har-clean) · [JSR `@sunasty/har-sanitizer`](https://jsr.io/@sunasty/har-sanitizer) · [GitHub](https://github.com/bsulyan/sunasty-har-sanitizer) |
+| **`swiss-math`** | JS / TS | npm · JSR · GitHub | [npm](https://www.npmjs.com/package/swiss-math) · [JSR `@sunasty/tournament-math`](https://jsr.io/@sunasty/tournament-math) · [GitHub](https://github.com/bsulyan/sunasty-tournament-math) |
+| **`barcode128-svg`** | JS / TS | npm · JSR · GitHub | [npm](https://www.npmjs.com/package/barcode128-svg) · [JSR `@sunasty/code128-svg`](https://jsr.io/@sunasty/code128-svg) · [GitHub](https://github.com/bsulyan/sunasty-code128-svg) |
+| **`oklch-wcag`** | JS / TS | npm · JSR · GitHub | [npm](https://www.npmjs.com/package/oklch-wcag) · [JSR `@sunasty/color-math`](https://jsr.io/@sunasty/color-math) · [GitHub](https://github.com/bsulyan/sunasty-color-math) |
+| **`qr-payload-parser`** | JS / TS | npm · JSR · GitHub | [npm](https://www.npmjs.com/package/qr-payload-parser) · [JSR `@sunasty/qr-payload`](https://jsr.io/@sunasty/qr-payload) · [GitHub](https://github.com/bsulyan/sunasty-qr-payload) |
 | **`sunasty-color-math`** | Python 3.8+ | PyPI | [PyPI: sunasty-color-math](https://pypi.org/project/sunasty-color-math/) |
 | **`sunasty-color-math`** | Rust 2021 | Cargo / crates.io / docs.rs | [crates.io](https://crates.io/crates/sunasty-color-math) · [docs.rs API](https://docs.rs/sunasty-color-math/latest/sunasty_color_math/) |
 | **`sunasty_color_math`** | Dart 3 / Flutter | pub.dev | [pub.dev: sunasty_color_math](https://pub.dev/packages/sunasty_color_math) ([publisher: sunasty.com](https://pub.dev/publishers/sunasty.com)) |
