@@ -32,6 +32,7 @@ The core mathematical, sanitization, and parsing engines powering Sunasty are pu
 | **`sunasty-color-math-go`** | Go 1.20+ | Go Modules | [pkg.go.dev/github.com/bsulyan/sunasty-color-math-go](https://pkg.go.dev/github.com/bsulyan/sunasty-color-math-go) |
 | **`sunasty/color-math`** | PHP 8.1+ | Composer / Packagist | [Packagist: sunasty/color-math](https://packagist.org/packages/sunasty/color-math) |
 | **Sunasty QR Scanner** | MV3 Extension | Chrome / Firefox / Edge | [Chrome Web Store](https://chromewebstore.google.com/detail/sunasty-qr-code-scanner-g/fbiighpklpogdbnhdapbiijcadhlijcb) · [Firefox AMO](https://addons.mozilla.org/en-US/firefox/addon/sunasty-qr-code-scanner-genera/) · [Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/sunasty-qr-code-scanner-generator/npbppaegpbeefpfaffjgphjecmgbngab) |
+| **Sunasty Color Picker** | MV3 Extension | Edge / GitHub | [Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/jcjfhbbmbnehefadhmhhegoccbdcfkgm) · [GitHub](https://github.com/bsulyan/sunasty-color-picker) |
 
 ## Interactive Web Suites
 
