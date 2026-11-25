@@ -38,6 +38,7 @@ Engineered for Chrome, Firefox, and Edge with zero external network requests:
   - [Firefox Add-ons (AMO)](https://addons.mozilla.org/en-US/firefox/addon/sunasty-qr-code-scanner-genera/) ([FR](https://addons.mozilla.org/fr/firefox/addon/sunasty-qr-code-scanner-genera/))
   - [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/sunasty-qr-code-scanner-generator/npbppaegpbeefpfaffjgphjecmgbngab)
 - **[Sunasty Color Picker & OKLCH Eyedropper](https://github.com/bsulyan/sunasty-color-picker)**: Pick screen pixels, convert sRGB to OKLCH, and test WCAG 2.1 contrast live.
+  - [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/jcjfhbbmbnehefadhmhhegoccbdcfkgm)
 
 ---
 
